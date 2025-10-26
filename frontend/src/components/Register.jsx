@@ -33,7 +33,11 @@ const Register = ({ switchToLogin }) => {
     const payload = { name: form.name, email: form.email, password: form.password, phone: form.phone };
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/register`)
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, password, phone }),
+})
 ;
       const data = await res.json();
       if (res.ok) {

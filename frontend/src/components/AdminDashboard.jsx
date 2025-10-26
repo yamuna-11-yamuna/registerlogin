@@ -1,4 +1,4 @@
-// src/components/AdminDashboard.jsx
+
 import React, { useEffect, useState } from "react";
 import "./AdminDashboard.css"; 
 
@@ -30,7 +30,6 @@ const AdminDashboard = ({ switchToLogin }) => {
         </button>
       </div>
 
-      {/* ✅ Dashboard cards */}
       <div className="dashboard-cards">
         <div className="card total-users">
           <div className="card-icon">👥</div>

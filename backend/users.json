@@ -1,21 +1,3 @@
 [
-  {
-    "name": "tanhgg",
-    "email": "ygsgya@gmail.com",
-    "password": "234567",
-    "phone": "0123456789"
-  },
-  {
-    "name": "admin",
-    "email": "admin@site.com",
-    "password": "admin123",
-    "phone": "1234567890"
-  },
-  {
-    "name": "yamuna yamuna",
-    "email": "yamunayy111@gmail.com",
-    "password": "111111",
-    "phone": "9812345671",
-    "loginCount": 0
-  }
+  
 ]

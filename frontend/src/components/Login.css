@@ -1,0 +1,145 @@
+/* Background gradient + centering */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #4facfe, #00f2fe);
+}
+
+/* Login box */
+.login-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Title */
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Icon + Input wrapper */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 6px 10px;
+  background: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.input-group:hover {
+  border-color: #1b78d5;
+}
+
+/* ✅ Smaller icons (same as register) */
+.input-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  opacity: 0.8;
+  object-fit: contain;
+}
+
+/* Input styling */
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Remember me + forgot password */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.remember input {
+  margin-right: 5px;
+}
+
+/* Button */
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1b78d5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #45a049;
+}
+
+/* Sign-up link */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.signup-link span {
+  color: #1b78d5;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signup-link span:hover {
+  text-decoration: underline;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 2px 0 8px;
+  text-align: left;
+  width: 100%;
+}
+/* ✅ Message box for success/error */
+.message {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+

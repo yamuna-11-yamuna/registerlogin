@@ -33,12 +33,12 @@ const Register = ({ switchToLogin }) => {
     const payload = { name: form.name, email: form.email, password: form.password, phone: form.phone };
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
+      const res = await fetch("https://registerlogin-neta.onrender.com/register", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, password, phone }),
-})
-;
+  body: JSON.stringify(payload),
+});
+
       const data = await res.json();
       if (res.ok) {
         setMessage({ text: data.message, type: "success" });

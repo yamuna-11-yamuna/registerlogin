@@ -23,12 +23,12 @@ const Login = ({ switchToRegister, onAdminLogin }) => {
   if (!validate()) return;
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
+    const response = await fetch("https://registerlogin-neta.onrender.com/login", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ email, password }),
-})
-;
+  body: JSON.stringify(form),
+});
+
 
     const data = await response.json();
 

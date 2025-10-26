@@ -7,9 +7,11 @@ const AdminDashboard = ({ switchToLogin }) => {
   const [totalLogins, setTotalLogins] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users", {
-      headers: { adminkey: "mySecretAdminKey" },
-    })
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/users`, {
+  headers: { adminkey: "mySecretAdminKey" },
+})
+
+
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);

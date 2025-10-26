@@ -33,7 +33,7 @@ const Register = ({ switchToLogin }) => {
     const payload = { name: form.name, email: form.email, password: form.password, phone: form.phone };
 
     try {
-      const res = await fetch("https://registerlogin-neta.onrender.com/register", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/register`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(payload),

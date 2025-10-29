@@ -7,6 +7,15 @@ import User from "./models/User.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+<<<<<<< HEAD
+=======
+const USERS_FILE = "./users.json";
+
+app.use(cors());
+app.use(bodyParser.json());
+
+
+>>>>>>> f5b293b2221980ba9a792329f5a3c773dc9d70e7
 const ADMIN_EMAIL = "admin@example.com";
 const ADMIN_PASSWORD = "admin123";
 const ADMIN_KEY = "mySecretAdminKey";
@@ -17,8 +26,13 @@ app.use(bodyParser.json());
 // Connect MongoDB
 connectDB();
 
+<<<<<<< HEAD
 // 🟢 Register
 app.post("/register", async (req, res) => {
+=======
+
+app.post("/register", (req, res) => {
+>>>>>>> f5b293b2221980ba9a792329f5a3c773dc9d70e7
   const { name, email, password, phone } = req.body;
   if (!name || !email || !password || !phone)
     return res.status(400).json({ message: "All fields are required." });
@@ -36,10 +50,18 @@ app.post("/register", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 // 🟢 Login
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
+=======
+
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+
+ 
+>>>>>>> f5b293b2221980ba9a792329f5a3c773dc9d70e7
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
     return res.status(200).json({ message: "Admin login successful!", admin: true });
   }
@@ -57,8 +79,13 @@ app.post("/login", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 // 🟢 Admin route
 app.get("/users", async (req, res) => {
+=======
+
+app.get("/users", (req, res) => {
+>>>>>>> f5b293b2221980ba9a792329f5a3c773dc9d70e7
   const { adminkey } = req.headers;
   if (adminkey !== ADMIN_KEY) return res.status(403).json({ message: "Unauthorized" });
 
@@ -70,4 +97,8 @@ app.get("/users", async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f5b293b2221980ba9a792329f5a3c773dc9d70e7
 app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));

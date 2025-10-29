@@ -34,7 +34,7 @@ const Login = ({ switchToRegister, onAdminLogin }) => {
 
     if (response.ok) {
       setMessage({ text: data.message, type: "success" });
-      if (data.admin) onAdminLogin(); // ✅ Redirect to admin dashboard
+      if (data.admin) onAdminLogin(); 
       else alert("User login successful!");
     } else {
       setMessage({ text: data.message, type: "error" });

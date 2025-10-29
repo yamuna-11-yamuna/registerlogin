@@ -1,7 +1,7 @@
 // backend/db.js
 import mongoose from "mongoose";
 
-const MONGO_URI = "mongodb+srv://yamunayy111_db_user:<QuantumPulse@2005>@cluster0.rbafdod.mongodb.net/?appName=Cluster0"
+const MONGO_URI = "mongodb+srv://yamunayy111_db_user:<MySecretPassWord123>@cluster0.rbafdod.mongodb.net/?appName=Cluster0"
 
 
 export const connectDB = async () => {

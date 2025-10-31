@@ -1,8 +1,22 @@
 // backend/db.js
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const MONGO_URI = "mongodb+srv://yamunayy111_db_user:<MySecretPassWord123>@cluster0.rbafdod.mongodb.net/?appName=Cluster0"
+dotenv.config();
 
+const {
+  MONGO_USER = "yamunayy111_db_user",
+  MONGO_PASSWORD,
+  MONGO_HOST = "cluster0.rbafdod.mongodb.net",
+  MONGO_DB_NAME = "yourDatabaseName",           // ← replace with your actual DB name
+  MONGO_PARAMS = "retryWrites=true&w=majority",
+} = process.env;
+
+if (!MONGO_PASSWORD) {
+  console.warn("⚠️  Warning: MONGO_PASSWORD not set in .env file");
+}
+
+const MONGO_URI = `mongodb+srv://${encodeURIComponent(MONGO_USER)}:${encodeURIComponent(MONGO_PASSWORD)}@${MONGO_HOST}/${MONGO_DB_NAME}?${MONGO_PARAMS}`;
 
 export const connectDB = async () => {
   try {
@@ -16,3 +30,4 @@ export const connectDB = async () => {
     process.exit(1);
   }
 };
+

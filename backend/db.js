@@ -15,7 +15,7 @@ const {
   MONGO_USER = "yamunayy111_db_user",
   MONGO_PASSWORD,
   MONGO_HOST = "cluster0.rbafdod.mongodb.net",
-  MONGO_DB_NAME = "yourDatabaseName",  // ← replace with your actual DB name in .env or here
+  MONGO_DB_NAME = "registerlogin_db",  
   MONGO_PARAMS = "retryWrites=true&w=majority",
 } = process.env;
 
